@@ -1,0 +1,44 @@
+.bot-card {
+  border: 1px solid #ddd;
+  padding: 16px;
+  margin: 8px;
+  border-radius: 8px;
+  text-align: center;
+  width: 200px;
+}
+
+.bot-card img {
+  max-width: 100px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.bot-card button {
+  margin: 4px;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.bot-card button:hover {
+  opacity: 0.8;
+}
+
+/* Specific style for the "Enlist" button */
+.bot-card .enlist-button {
+  background-color: blue;
+  color: white;
+}
+
+
+.catchphrase-box {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+  margin-top: 8px;
+  text-align: center;
+  word-wrap: break-word; /* Ensures long words break and wrap to the next line */
+  max-width: 100%; /* Prevents the box from exceeding the width of its container */
+}
