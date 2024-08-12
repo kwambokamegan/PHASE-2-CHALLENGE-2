@@ -25,7 +25,6 @@
   opacity: 0.8;
 }
 
-/* Specific style for the "Enlist" button */
 .bot-card .enlist-button {
   background-color: blue;
   color: white;
@@ -39,6 +38,6 @@
   padding: 8px;
   margin-top: 8px;
   text-align: center;
-  word-wrap: break-word; /* Ensures long words break and wrap to the next line */
-  max-width: 100%; /* Prevents the box from exceeding the width of its container */
+  word-wrap: break-word; 
+  max-width: 100%; 
 }
