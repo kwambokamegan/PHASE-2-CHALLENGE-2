@@ -11,7 +11,7 @@ function App() {
   useEffect(() => {
     const fetchBots = async () => {
       try {
-        const response = await axios.get('http://localhost:8002/bots');
+        const response = await axios.get('https://botsbattlr-backend.vercel.app/bots');
         setBots(response.data);
       } catch (error) {
         console.error('Error fetching bots:', error);
@@ -21,7 +21,7 @@ function App() {
   }, []);
 
   const enlistBot = (bot) => {
-    console.log('Enlisting bot:', bot); // Debugging line
+    console.log('Enlisting bot:', bot); 
     if (!botArmy.some(b => b.id === bot.id)) {
       setBotArmy([...botArmy, bot]);
     }
@@ -32,11 +32,14 @@ function App() {
   };
 
   const dischargeBot = async (botId) => {
+    console.log('Attempting to discharge bot with ID:', botId); 
     try {
-      await axios.delete(`http://localhost:8002/bots/${botId}`);
+      
+      const response = await axios.delete(`https://botsbattlr-backend.vercel.app/bots/${botId}`);
+      console.log('Bot discharged successfully:', response); 
       releaseBot(botId);
     } catch (error) {
-      console.error('Error discharging bot:', error);
+      console.error('Error discharging bot:', error.response ? error.response.data : error.message);
     }
   };
 
